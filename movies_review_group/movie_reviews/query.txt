@@ -1,0 +1,5 @@
+INSERT INTO movies (title) VALUES ("MI_Dead_Reckoning_Part_One");
+INSERT INTO movies (title) VALUES ("Indiana_Jones_DialofDestiny");
+INSERT INTO movies (title) VALUES ("Oppenheimer");
+INSERT INTO movies (title) VALUES ("James_Bond_Spectre");
+INSERT INTO movies (title) VALUES ("Aquaman");

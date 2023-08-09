@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/css/style.css">
+    <title>Show Review Info</title>
+    <style>
+        body {
+            /* Replace 'image.jpg' with the path to your image */
+            background-image: url('/static/img/background_image3.jpg');
+            /* Set the background image to cover the whole page */
+            background-size: cover;
+            /* Center the background image vertically and horizontally */
+            background-position: center center;
+            /* Prevent background image from repeating */
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid d-flex justify-content-between grid gap-3">
+            <h2>Welcome {{session['name'] }}</h2>
+            <div class="d-flex justify-content-between grid gap-3">
+                <a href="/dashboard" class="btn btn-light shadow mt-2 bg-body-tertiary rounded">Home</a>
+                <a href="/comments" class="btn btn-light shadow mt-2 bg-body-tertiary rounded">Reviews</a>
+                <a href="/logout" class="btn btn-light shadow mt-2 p-2 bg-body-tertiary rounded">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <h2 class="text-center">Movie: {{one_review.get_movie_name()}}</h2>
+    </div>
+    <div>
+        <h3 class="text-center">Posted By: {{ one_review.get_first_name()}}</h3>
+    </div>
+    <div class="container-fluid border-black col-5 my-8 text-center bg-body-secondary-subtle shadow-lg p-3 mb-5 mt-5 bg-body-dark rounded">
+        <p>Review : {{one_review.body}}</p>
+        <p>Recommended? : {{one_review.recommended}}</p>
+        <p>Date Reviewed: {{one_review.date_reviewed}}</p>
+    </div>
+</body>
+
+</html>

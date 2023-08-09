@@ -1,0 +1,32 @@
+body {
+    /* Replace 'image.jpg' with the path to your image */
+    background-image: url('/static/img/background_image3.jpg');
+    /* Set the background image to cover the whole page */
+    background-size: cover;
+    /* Center the background image vertically and horizontally */
+    background-position: center center;
+    /* Prevent background image from repeating */
+    background-repeat: no-repeat;
+}
+
+
+.movie-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+.movie-list span {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.Movie_One, .Movie_Two, .Movie_Three, .Movie_Four, .Movie_Five {
+    border-radius: 10%;
+    height: 125px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font: white;
+}
